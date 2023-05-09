@@ -30,6 +30,11 @@ public class DiagnosticsClient {
         }));
     }
 
+    public static void init(String address, int port) {
+        DiagnosticsClient.address = address;
+        DiagnosticsClient.port = port;
+    }
+
     public static DiagnosticsClient getInstance() {
         return instance == null ? instance = new DiagnosticsClient() : instance;
     }
